@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Régis Store</title>
+    <style>
+        /* Estilo geral da página */
+         body {
+            font-family: Arial, sans-serif; /*Usa a fonte Arial*/
+            margin: 0; 
+            padding: 0; 
+            /*Remove espaçamento interno e externo padrão*/
+            background-color: #f4f4f4; /* Define a cor de fundo da página*/
+            min-height: 100vh; /* Garante que o body ocupe no mínimo 100% da altura da janela */
+        }
+        header {
+            background-color: #6EAFB0; /* Define a cor de fundo  do cabeçalho*/
+            color: #000000; /*Define a cor do texto no cabeçalho*/
+            padding: 10px 0; /*Adiciona Espaçamento interno no topo e embaixo.*/
+            text-align: center; /*Centraliza o texto dentro do cabeçalho.*/
+           
+        }
+        nav {  /*Centraliza os links e aplica espaçamento*/
+            text-align: center; 
+            padding: 15px; 
+        }
+        nav a { /*Define a cor dos links e remove o sublinhado padrão e e aplica espaçamento*/
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: #000000; 
+        }
+        .container {
+            padding: 20px; /*Adiciona 20 pixels de espaçamento interno ao redor do conteúdo dentro da div*/
+            max-width: 1200px; /* Define uma largura máxima de 1200 pixels para o contêiner, para que ele não fique muito largo em telas grandes*/
+            margin: 0 auto; /* Centraliza o contêiner horizontalmente na página (com margens automáticas nas laterais).*/
+            flex-grow: 1; /* Faz o container crescer para ocupar o espaço restante da página */
+        }
+     
+        footer {
+            text-align: center; /*Centraliza o texto no rodapé*/
+            padding: 10px; /*Adiciona 10 pixels de espaçamento interno ao redor do conteúdo do rodapé*/
+            background-color: #6EAFB0; /*Define a cor de fundo do rodapé*/
+            color: #050007; /* Define a cor do texto no rodapé*/
+            width: 100%; /*Faz o rodapé ocupar toda a largura da tela*/
+        }
+     
+
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho com o nome da loja -->
+    <header>
+        <h1>Régis Store</h1>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav style="background-color: #f8f9fa">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+    </nav>
+
+    <!-- Conteúdo principal da página -->
+    <div class="container">
+        <div style="background-color: #6EAFB0"; width: 100%; margin-top: 10px;>
+            <br>
+            <h2 style="text-align: center">Contacte-nos</h2>
+            <p style="text-align: center"> Estamos aqui para ajudar! Se você tiver dúvidas, precisar de assistência ou quiser saber mais sobre nossos produtos e serviços, entre em contato conosco. </p>
+            <p style="text-align: center"> Nossa equipe está pronta para oferecer o melhor atendimento e garantir que sua experiência de compra seja perfeita.</p>
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <div class="container py-5" style="text-align: center">
+            <form class="col-md-9 m-auto" id="contactForm" method="post" role="form">
+                <div class="row">
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputname">Name</label>
+                        <br>
+                        <input type="text" class="form-control mt-1" id="name" name="name" placeholder="Name" required>
+                        <br>
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputemail">E-mail</label>
+                        <br>
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputemail">Telefone</label>
+                        <br>
+                        <input type="telefone" class="form-control mt-1" id="telefone" name="telefone" placeholder="Telefone" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputmessage">Mensagem</label>
+                    <br>
+                    <textarea class="form-control mt-1" id="message" name="message" placeholder="Mensagem" rows="8" required></textarea>
+                </div>
+                <div class="row">
+                    <div class="col text-end mt-2">
+                        <button type="submit" class="btn btn-success btn-lg px-3">Enviar</button>  
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <script>
+                    document.getElementById('contactForm').addEventListener('submit', function(event) {
+                        event.preventDefault(); 
+            
+                        const name = document.getElementById('name').value;
+                        const email = document.getElementById('email').value;
+                        const telefone = document.getElementById('telefone').value;  <!-- Corrigido de 'subject' para 'telefone' -->
+                        const message = document.getElementById('message').value;
+            
+                        const formData = `
+                        Mensagem Enviada Com Sucesso.\n
+                        Nome: ${name}\n
+                        E-mail: ${email}\n
+                        Telefone: ${telefone}\n
+                        Mensagem: ${message}
+                        `;
+            
+                        alert(formData);
+                    });
+                </script>
+        <br>
+        <br>
+        <!-- Rodapé -->
+        <footer>
+            
+            <p>R. Zulmira Canavarros, 95 - Centro, Cuiabá - MT, 78005-390</p>
+            <p>(65) 3318-1526</p>
+            <p>regisstore@gmail.com</p>
+            <p>Copyright &copy; 2024 - Régis Store</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Régis Store</title>
+    <style>
+        /* Estilo geral da página */
+         body {
+            font-family: Arial, sans-serif; /*Usa a fonte Arial*/
+            margin: 0; 
+            padding: 0; 
+            /*Remove espaçamento interno e externo padrão*/
+            background-color: #f4f4f4; /* Define a cor de fundo da página*/
+        }
+        header {
+            background-color: #6EAFB0; /* Define a cor de fundo  do cabeçalho*/
+            color: #000000; /*Define a cor do texto no cabeçalho*/
+            padding: 10px 0; /*Adiciona Espaçamento interno no topo e embaixo.*/
+            text-align: center; /*Centraliza o texto dentro do cabeçalho.*/
+           
+        }
+        nav {  /*Centraliza os links e aplica espaçamento*/
+            text-align: center; 
+            padding: 15px; 
+        }
+        nav a { /*Define a cor dos links e remove o sublinhado padrão e e aplica espaçamento*/
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: #000000; 
+        }
+     
+        footer {
+            text-align: center; /*Centraliza o texto no rodapé*/
+            padding: 10px; /*Adiciona 10 pixels de espaçamento interno ao redor do conteúdo do rodapé*/
+            background-color: #6EAFB0; /*Define a cor de fundo do rodapé*/
+            color: #050007; /* Define a cor do texto no rodapé*/
+            width: 100%;/*Faz o rodapé ocupar toda a largura da tela*/
+        }
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+        }
+        .product-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 60px;
+            padding: 60px 0;
+        }
+        .product {
+            border: 1px solid #6EAFB0;
+            width: 300px;
+            text-align: center;
+            padding: 40px;
+        }
+        .product img {
+            width: 100%;
+        }
+        .product h2 {
+            font-size: 18px;
+            margin: 15px 0;
+        }
+
+    
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com o nome da loja -->
+    <header>
+        <h1>Régis Store</h1>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav style="background-color: #f8f9fa">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+    </nav>
+
+    <!-- Parte 1 -->
+    <section style="padding: 60px 0">
+        <div style="text-align: center; margin-bottom: 40px">
+            <h2>Produtos Disponiveis</h2>
+            <p>Frete gratis na primeira compra</p>
+        </div>
+            
+        <!-- Envolve de três em três produtos e utiliza o estilo display: flex para posicioná-los em linha (horizontalmente). -->
+        <div style="display: flex; justify-content: center; gap: 60px;"> 
+            <!-- Produto 1 -->
+
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="item.html"><img src="https://img.lojasrenner.com.br/item/927665227/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                <h2 style="font-size: 18px; margin: 15px 0;">Blusa Social de Manga Longa em Ribana de Poliamida  </h2>
+                <p>R$80.00</p>
+                <p>PP/P/M/G/GG</p>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div> 
+
+             <!-- Produto 2 -->
+             <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="item.html"><img src="https://img.lojasrenner.com.br/item/927684727/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                <h2 style="font-size: 18px; margin: 15px 0;">Blusa sem Manga em Chiffon com Golinha e Forro Branco Neve</h2> 
+                <p>R$80.00</p>
+                <p>PP/P/M/G/GG</p>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div>
+
+            <!-- Produto 3 -->
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="item.html"><img src="https://img.lojasrenner.com.br/item/928119885/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                <h2 style="font-size: 18px; margin: 15px 0;">Blusa em Ribana com Gola Contrastante e Estampa Listras</h2>
+                <p>R$69.00</p>
+                <p>PP/P/M/G/GG</p>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div>
+        </div>
+       
+        <!-- Parte 2 -->
+        <br>
+        <div style="display: flex; justify-content: center; gap: 60px;"> 
+            <!-- Produto 1 -->
+
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="item.html"><img src="https://img.lojasrenner.com.br/item/886246121/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                <h2 style="font-size: 18px; margin: 15px 0;">Calça Wide Leg Cintura Alta em Sarja Cargo</h2>
+                <p>R$160.90</p>
+                <p>P/M/G/GG</p>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div> 
+
+             <!-- Produto 2 -->
+             <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="item.html"><img src="https://img.lojasrenner.com.br/item/581968991/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                <h2 style="font-size: 18px; margin: 15px 0;">Calça Mom Jeans com Elástico na Cintura Destroyed</h2> 
+                <p>R$79.00</p>
+                <p>PP/P/M/G</p>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div>
+
+            <!-- Produto 3 -->
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="item.html"><img src="https://img.lojasrenner.com.br/item/921652038/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                <h2 style="font-size: 18px; margin: 15px 0;">Calça Wide Leg Cintura Alta Cargo Cimento</h2>
+                <p>R$120.00</p>
+                <p>PP/P/M/G/GG</p>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div>
+        </div>
+
+         <!-- Parte 3 -->
+         <br>
+         <div style="display: flex; justify-content: center; gap: 60px;"> 
+             <!-- Produto 1 -->
+ 
+             <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                 <a href="item.html"><img src="https://img.lojasrenner.com.br/item/882203546/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                 <h2 style="font-size: 18px; margin: 15px 0;">Pijama Longo Infantil em Fleece com Estampa do Simba Amarelo</h2>
+                 <p>R$98.90</p>
+                 <p>1/2/3/4</p>
+                 <p><a class="btn btn-success">Comprar</a></p>
+             </div> 
+ 
+              <!-- Produto 2 -->
+              <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                 <a href="item.html"><img src="https://img.lojasrenner.com.br/item/873048361/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                 <h2 style="font-size: 18px; margin: 15px 0;">Jaqueta Leve Infantil con Capuz de Dino na cor Verde</h2> 
+                 <p>R$80.00</p>
+                 <p>1/2/3/4/5</p>
+                 <p><a class="btn btn-success">Comprar</a></p>
+             </div>
+ 
+             <!-- Produto 3 -->
+             <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                 <a href="item.html"><img src="https://img.lojasrenner.com.br/item/914520037/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                 <h2 style="font-size: 18px; margin: 15px 0;">Vestido Infantil em Tricoline com Bordados na cor Rosa</h2>
+                 <p>R$140.00</p>
+                 <p>1/2/3/4/5</p>
+                 <p><a class="btn btn-success">Comprar</a></p>
+             </div>
+         </div>
+
+           <!-- Parte 4 -->
+           <br>
+           <div style="display: flex; justify-content: center; gap: 60px;"> 
+               <!-- Produto 1 -->
+   
+               <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                   <a href="item.html"><img src="https://img.lojasrenner.com.br/item/883876831/original/2.jpg" alt="Feminina" style="width: 100%"></a>
+                   <h2 style="font-size: 18px; margin: 15px 0;">Brinco Coração em Metal Dourado</h2>
+                   <p>R$99.90</p>
+                   <p><a class="btn btn-success">Comprar</a></p>
+               </div> 
+   
+                <!-- Produto 2 -->
+                <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                   <a href="item.html"><img src="https://img.lojasrenner.com.br/item/927263720/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                   <h2 style="font-size: 18px; margin: 15px 0;">Conjunto de Colar e Brinco Prata</h2> 
+                   <p>R$50.00</p>
+                   <p><a class="btn btn-success">Comprar</a></p>
+               </div>
+   
+               <!-- Produto 3 -->
+               <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                   <a href="item.html"><img src="https://img.lojasrenner.com.br/item/895849215/original/3.jpg" alt="Feminina" style="width: 100%"></a>
+                   <h2 style="font-size: 18px; margin: 15px 0;">Conjunto Colar e Brinco Mexicano</h2>
+                   <p>R$70.00</p>
+                   <p><a class="btn btn-success">Comprar</a></p>
+               </div>
+           </div>
+
+</section>
+</div>
+
+    <!-- Rodapé -->
+    <footer>
+         <p> R. Zulmira Canavarros, 95 - Centro, Cuiabá - MT, 78005-390</p>
+         <p> (65) 3318-1526</p>
+         <p> regisstore@gmail.com</p>
+         <p>Copyright &copy; 2024 - Régis Store</p>
+    </footer>
+</body>
+</html>

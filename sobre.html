@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Régis Store</title>
+    <style>
+        /* Estilo geral da página */
+         body {
+            font-family: Arial, sans-serif; /*Usa a fonte Arial*/
+            margin: 0; 
+            padding: 0; 
+            /*Remove espaçamento interno e externo padrão*/
+            background-color: #f4f4f4; /* Define a cor de fundo da página*/
+        }
+        header {
+            background-color: #6EAFB0; /* Define a cor de fundo  do cabeçalho*/
+            color: #000000; /*Define a cor do texto no cabeçalho*/
+            padding: 10px 0; /*Adiciona Espaçamento interno no topo e embaixo.*/
+            text-align: center; /*Centraliza o texto dentro do cabeçalho.*/
+           
+        }
+        nav {  /*Centraliza os links e aplica espaçamento*/
+            text-align: center; 
+            padding: 15px; 
+        }
+        nav a { /*Define a cor dos links e remove o sublinhado padrão e e aplica espaçamento*/
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: #000000; 
+        }
+        .container {
+            padding: 20px; /*Adiciona 20 pixels de espaçamento interno ao redor do conteúdo dentro da div*/
+            max-width: 1200px; /* Define uma largura máxima de 1200 pixels para o contêiner, para que ele não fique muito largo em telas grandes*/
+            margin: 0 auto; /* Centraliza o contêiner horizontalmente na página (com margens automáticas nas laterais).*/
+        }
+        footer {
+            text-align: center; /*Centraliza o texto no rodapé*/
+            padding: 10px; /*Adiciona 10 pixels de espaçamento interno ao redor do conteúdo do rodapé*/
+            background-color: #6EAFB0; /*Define a cor de fundo do rodapé*/
+            color: #050007; /* Define a cor do texto no rodapé*/
+            width: 100%; /*Faz o rodapé ocupar toda a largura da tela*/
+        }
+
+        /* Estilo para as imagens */
+        .vertical-images {
+            display: flex;
+            flex-direction: column; /* Exibe as imagens na vertical */
+            align-items: center; /* Centraliza as imagens horizontalmente */
+            justify-content: center; /* Centraliza as imagens verticalmente */
+            padding: 20px;
+        }
+
+        .vertical-images img {
+            width: 300px; /* Define a largura das imagens */
+            height: 300px; /* Define a altura das imagens */
+            border-radius: 50%; /* Deixa as imagens com moldura redonda */
+            border: 1px solid #6EAFB0; /* Adiciona uma borda preta em volta */
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho com o nome da loja -->
+    <header>
+        <h1>Régis Store</h1>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav style="background-color: #f8f9fa">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+    </nav>
+
+    <!-- Conteúdo principal da página -->
+    <div class="container">
+        <div style="background-color: #6EAFB0"; width: 100%; margin-top: 10px;>
+            <br>
+            <h2 style="text-align: center">Sobre Nós</h2>
+            <p style="text-align: center"> Bem-vindos à Régis Store, onde estilo e qualidade se encontram para vestir com o que há de melhor! </p>
+            <p style="text-align: center"> Somos uma loja online dedicada a oferecer uma seleção cuidadosa de roupas femininas, moda infantil, e acessórios que combinam tendências atuais com o conforto que você merece. </p>
+            <p style="text-align: center"> Nossa missão é trazer peças que valorizam a individualidade e o bem-estar, com opções para todas as ocasiões, desde o dia a dia até momentos especiais. </p>
+            <p style="text-align: center"> Cada item em nosso catálogo é escolhido pensando na diversidade e nas necessidades de nossos clientes, garantindo que você sempre encontre algo que se encaixe perfeitamente no seu estilo.</p>
+            <br>
+            <br>
+            <img src="https://img.freepik.com/vetores-premium/roupas-penduradas-na-grade-de-roupas-com-conceito-de-vetor-de-guarda-roupa-casual-feminino-de-roupas-femininas_461812-723.jpg" style="width: 100%">
+        </div>
+
+        <!-- Seção de serviços -->
+        <section style="padding: 60px 0;">
+            <div style="text-align: center;">
+                <h2>Os nossos serviços</h2>
+                <p>Estamos comprometidos em oferecer mais do que apenas produtos.</p>
+            </div>
+            <div style="display: flex; justify-content: center; gap: 60px;">
+                <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                    <a href="#"><img src="https://www.pngall.com/wp-content/uploads/12/Delivery-Scooter-PNG-Cutout.png" alt="Entrega" style="width: 100%;"></a>
+                    <h2 style="font-size: 18px;">Serviços de entrega</h2>
+                </div> 
+                
+                <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/7191/7191397.png" alt="Devolução" style="width: 100%;"></a>
+                    <h2 style="font-size: 18px;">Envio e devolução</h2> 
+                </div>
+            </div>
+            <br>
+            <div style="display: flex; justify-content: center; gap: 60px;">
+                <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                    <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/16/16398.png" alt="24horas" style="width: 100%;"></a>
+                    <h2 style="font-size: 18px;">Serviço 24 horas</h2>
+                </div>
+                <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                    <a href="#"><img src="https://static.vecteezy.com/system/resources/thumbnails/012/027/215/small_2x/promo-banner-tag-png.png" alt="Promoção" style="width: 100%;"></a>
+                    <h2 style="font-size: 18px;">Promoção</h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de marcas -->
+        <section style="padding: 10px 0;">
+            <div style="text-align: center;">
+                <h2>As nossas marcas</h2>
+                <p>Temos orgulho de trabalhar com marcas que compartilham nosso compromisso com qualidade e estilo.</p>
+                <img src="https://www.imagensempng.com.br/wp-content/uploads/2023/05/Logo-Renner-Png-1024x1024.png" style="width: 5%;">
+                <img src="https://e7.pngegg.com/pngimages/726/873/png-clipart-nike-logo-material-nike-nike-logo-thumbnail.png" style="width: 5%;">
+                <img src="https://w7.pngwing.com/pngs/488/478/png-transparent-adidas-originals-t-shirt-logo-brand-adidas-angle-text-retail-thumbnail.png" style="width: 7%;">
+                <img src="https://e7.pngegg.com/pngimages/269/82/png-clipart-logo-levi-strauss-co-brand-jeans-jeans-text-label.png" style="width: 5%;">
+            </div>
+        </section>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>R. Zulmira Canavarros, 95 - Centro, Cuiabá - MT, 78005-390</p>
+        <p>(65) 3318-1526</p>
+        <p>regisstore@gmail.com</p>
+        <p>Copyright &copy; 2024 - Régis Store</p>
+    </footer>
+</body>
+</html>

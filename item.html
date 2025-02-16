@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Régis Store</title>
+        <style>
+            /* Estilo geral da página */
+            body {
+                font-family: Arial, sans-serif; /*Usa a fonte Arial*/
+                margin: 0; 
+                padding: 0; 
+                /*Remove espaçamento interno e externo padrão*/
+                background-color: #f4f4f4; /* Define a cor de fundo da página*/
+            }
+            header {
+                background-color: #6EAFB0; /* Define a cor de fundo  do cabeçalho*/
+                color: #000000; /*Define a cor do texto no cabeçalho*/
+                padding: 10px 0; /*Adiciona Espaçamento interno no topo e embaixo.*/
+                text-align: center; /*Centraliza o texto dentro do cabeçalho.*/
+            
+            }
+            nav {  /*Centraliza os links e aplica espaçamento*/
+                text-align: center; 
+                padding: 15px; 
+            }
+            nav a { /*Define a cor dos links e remove o sublinhado padrão e e aplica espaçamento*/
+                margin: 0 15px; 
+                text-decoration: none; 
+                color: #000000; 
+            }
+            .container {
+                padding: 20px; /*Adiciona 20 pixels de espaçamento interno ao redor do conteúdo dentro da div*/
+                max-width: 1200px; /* Define uma largura máxima de 1200 pixels para o contêiner, para que ele não fique muito largo em telas grandes*/
+                margin: 0 auto; /* Centraliza o contêiner horizontalmente na página (com margens automáticas nas laterais).*/
+            }
+            footer {
+                text-align: center; /*Centraliza o texto no rodapé*/
+                padding: 10px; /*Adiciona 10 pixels de espaçamento interno ao redor do conteúdo do rodapé*/
+                background-color: #6EAFB0; /*Define a cor de fundo do rodapé*/
+                color: #050007; /* Define a cor do texto no rodapé*/
+                width: 100%;/*Faz o rodapé ocupar toda a largura da tela*/
+            }
+
+            /* Estilos do carrossel */
+            .carousel {
+                width: 100%;  /*Faz o carrossel ocupar 100% da largura disponível*/
+                max-width: 600px; /* Define limita a largura máxima a 600px.*/
+                margin: 20px auto; /* Centraliza o carrossel com espaçamento de 20px no topo e embaixo.*/
+                overflow: hidden; /*Garante que apenas uma imagem seja exibida por vez.*/
+                position: relative; /*Necessário para posicionar os botões "Próximo" e "Anterior" dentro do carrossel.*/
+            }
+            .slides {
+                display: flex; /*Organiza as imagens em linha*/
+                transition: transform 0.5s ease-in-out; /*Adiciona uma animação suave ao mover os slides.*/
+            }
+            .slide {
+                min-width: 100%; /* Garante que cada slide ocupe 100% da largura do carrossel.*/
+                text-align: center; /*Centraliza o conteúdo de texto dentro de cada slide.*/
+            }
+            .slide img {
+                width: 100%;
+                height: auto;
+            }
+        
+            /* Botões de navegação */
+            .prev, .next { 
+                position: absolute; /*Coloca os botões sobre o carrossel.*/
+                top: 50%; /*Centraliza os botões verticalmente.*/
+                background-color: rgba(0, 0, 0, 0.5); /*Define Cor de fundo*/
+                color: white;
+                border: none;
+                padding: 10px;
+                cursor: pointer; /*Faz o cursor mudar para "mão" ao passar sobre os botões*/
+            }
+            .prev {
+                left: 10px; /*Posicionam os botões nas laterais.*/
+            }
+            .next {
+                right: 10px; /*Posicionam os botões nas laterais.*/
+            }
+
+            /* Indicadores */
+            .indicators {
+                text-align: center;
+                margin-top: 10px;
+            }
+            .indicator {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background-color: #ccc;
+                border-radius: 50%;
+                margin: 5px;
+                cursor: pointer;
+            }
+            .indicator.active {
+                background-color: #6EAFB0;
+            }
+
+            /* Estilo da seção "Itens mais comprados" */
+            .rounded-circle {
+                border-radius: 50%;
+            }
+            .btn-success {
+                background-color: #28a745;
+                color: white;
+                text-decoration: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+            }
+            .btn-success:hover {
+                background-color: #218838;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .col-md-4 {
+                flex: 1 0 30%; /* Responsivo */
+                max-width: 30%;
+                box-sizing: border-box;
+            }
+            .p-5 {
+                padding: 2rem;
+            }
+            .mt-3 {
+                margin-top: 1rem;
+            }
+            /* Texto de incio alinhado no centro */
+            .text-center {
+                text-align: center;
+            }
+            /* Estilo para as imagens */
+            .vertical-images {
+                display: flex;
+                flex-direction: column; /* Exibe as imagens na vertical */
+                align-items: center; /* Centraliza as imagens horizontalmente */
+                justify-content: center; /* Centraliza as imagens verticalmente */
+                padding: 20px;
+            }
+
+            .vertical-images img {
+                width: 300px; /* Define a largura das imagens */
+                height: 300px; /* Define a altura das imagens */
+                border-radius: 50%; /* Deixa as imagens com moldura redonda */
+                border: 1px solid #6EAFB0; /* Adiciona uma borda preta em volta */
+                margin: 0px 0; /* Adiciona espaço entre as imagens */
+            }
+            .vertical-images h5 {
+                text-align: center;
+                margin-top: 10px;
+            }
+        
+            .vertical-images p {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+
+            .video-container {
+                text-align: center;
+                margin-top: 20px;
+            }
+            iframe {
+                width: 560px;  /* Largura do vídeo */
+                height: 315px; /* Altura do vídeo */
+            }
+    
+            </style>
+        </head>
+    <body>
+
+    <!-- Cabeçalho com o nome da loja -->
+    <header>
+        <h1>Régis Store</h1>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav style="background-color: #f8f9fa">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+    </nav>
+
+    <!-- Conteúdo principal da página -->
+    <div class="container">
+        <h2 style="text-align: center">Estilo e conforto em uma só peça: descubra a Calça perfeita para compor looks versáteis!</h2>
+        <br>
+        <!-- Carrossel interativo -->
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://img.lojasrenner.com.br/item/886246121/original/3.jpg" alt="Feminina">
+                    <h3>Calça Wide Leg Cintura Alta em Sarja com Bolsos Cargo </h3>
+                    <p><b>Cor:</b> Off White</p>
+                    <p><b>Marca:</b> Renner</p>
+                    <p><b> R$ 160,00</b></p>
+                    <p>Material mais Sustentável</p>
+                    <p><b>Tecido:</b> Sarja (Tecido Plano)</p>
+                    <p><b>Tamanho:</b> PP/M/G </p>
+                    <p><a class="btn btn-success">Comprar</a></p>
+                </div>
+                <div class="slide">
+                    <img src="https://img.lojasrenner.com.br/item/886246121/original/4.jpg" alt="Infantil">
+                    <h3>Calça Wide Leg Cintura Alta em Sarja com Bolsos Cargo </h3>
+                    <p><b>Cor:</b> Off White</p>
+                    <p><b>Marca:</b> Renner</p>
+                    <p><b> R$ 160,00</b></p>
+                    <p>Material mais Sustentável</p>
+                    <p><b>Tecido:</b> Sarja (Tecido Plano)</p>
+                    <p><b>Tamanho:</b> PP/M/G </p>
+                    <p><a class="btn btn-success">Comprar</a></p>
+                </div>
+                <div class="slide">
+                    <img src="https://img.lojasrenner.com.br/item/886246121/original/6.jpg" alt="Acessórios">
+                    <h3>Calça Wide Leg Cintura Alta em Sarja com Bolsos Cargo </h3>
+                    <p><b>Cor:</b> Off White</p>
+                    <p><b>Marca:</b> Renner</p>
+                    <p><b> R$ 160,00</b></p>
+                    <p>Material mais Sustentável</p>
+                    <p><b>Tecido:</b> Sarja (Tecido Plano)</p>
+                    <p><b>Tamanho:</b> PP/M/G </p>
+                    <p><a class="btn btn-success">Comprar</a></p>
+                </div>  
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <div class="indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </div>
+
+    <!-- Seção "Itens mais comprados" -->
+    <section style="padding: 60px 0" style="background-color: #595a5a">
+        <div style="text-align: center; margin-bottom: 60px">
+            <h2 style="text-align: center">Itens Sugeridos:</h2>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 60px;"> 
+        
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="produtos.html"><img src="https://img.lojasrenner.com.br/item/581968991/original/3.jpg" alt="Imagem 1" style="width: 100%" ></a>  <!--border-radius: 50%-->
+                <h5 style="font-size: 18px; margin: 15px 0">Calça Mom Jeans com Elástico na Cintura Destroyed</h5>
+                <p> R$ 79.00 </p>
+                <p> PP/P/M/G </p>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div> 
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="produtos.html"><img src="https://img.lojasrenner.com.br/item/928119885/original/3.jpg" alt="Imagem 2" style="width: 100%"></a>
+                <h5 style="font-size: 18px; margin: 15px 0">Blusa com Gola Contrastante e Estampa Listras</h5>
+                <p> R$69.00 </p>
+                <p> P/P/M/G/GG </p>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div> 
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="produtos.html"><img src="https://img.lojasrenner.com.br/item/921652038/original/3.jpg" alt="Imagem 3" style="width: 100%"></a>
+                <h5 style="font-size: 18px; margin: 15px 0">Calça Wide Leg Cintura Alta Cargo Cimento</h5>
+                <p> R$ 120.00 </p>
+                <p> PP/P/M/G/GG </p>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div> 
+        </div>
+    </section>
+
+        <!-- Rodapé -->
+        <footer>
+            <p> R. Zulmira Canavarros, 95 - Centro, Cuiabá - MT, 78005-390</p>
+            <p> (65) 3318-1526</p>
+            <p> regisstore@gmail.com</p>
+            <p>Copyright &copy; 2024 - Régis Store</p>
+        </footer>
+
+        <!-- JavaScript do carrossel -->
+        <script>
+            let currentSlide = 0; /*Controla qual slide está sendo exibido*/
+            const slides = document.querySelectorAll('.slide');
+            const indicators = document.querySelectorAll('.indicator');
+
+            function showSlide(index) /*Função que exibe o slide correto e atualiza os indicadores.*/{
+                const slidesContainer = document.querySelector('.slides');
+                    slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+                    indicators.forEach((indicator, i) => {
+                    indicator.classList.toggle('active', i === index);
+                });
+            }
+            /*Adiciona eventos de clique nos botões Próximo e Anterior para alternar entre os slides*/
+            document.querySelector('.next').addEventListener('click', () => {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            });
+
+            document.querySelector('.prev').addEventListener('click', () => {
+                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(currentSlide);
+            });
+
+            /*Permite que o usuário clique nos indicadores para ir diretamente para o slide correspondente*/
+            indicators.forEach((indicator, i) => {
+                indicator.addEventListener('click', () => {
+                    currentSlide = i;
+                    showSlide(currentSlide);
+                });
+            });
+        </script>
+    </body>
+</html>
