@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Régis Store</title>
+    <style>
+        /* Estilo geral da página */
+         body {
+            font-family: Arial, sans-serif; /*Usa a fonte Arial*/
+            margin: 0; 
+            padding: 0; 
+            /*Remove espaçamento interno e externo padrão*/
+            background-color: #f4f4f4; /* Define a cor de fundo da página*/
+        }
+        header {
+            background-color: #6EAFB0; /* Define a cor de fundo  do cabeçalho*/
+            color: #000000; /*Define a cor do texto no cabeçalho*/
+            padding: 10px 0; /*Adiciona Espaçamento interno no topo e embaixo.*/
+            text-align: center; /*Centraliza o texto dentro do cabeçalho.*/
+           
+        }
+        nav {  /*Centraliza os links e aplica espaçamento*/
+            text-align: center; 
+            padding: 15px; 
+        }
+        nav a { /*Define a cor dos links e remove o sublinhado padrão e e aplica espaçamento*/
+            margin: 0 15px; 
+            text-decoration: none; 
+            color: #000000; 
+        }
+        .container {
+            padding: 20px; /*Adiciona 20 pixels de espaçamento interno ao redor do conteúdo dentro da div*/
+            max-width: 1200px; /* Define uma largura máxima de 1200 pixels para o contêiner, para que ele não fique muito largo em telas grandes*/
+            margin: 0 auto; /* Centraliza o contêiner horizontalmente na página (com margens automáticas nas laterais).*/
+        }
+        footer {
+            text-align: center; /*Centraliza o texto no rodapé*/
+            padding: 10px; /*Adiciona 10 pixels de espaçamento interno ao redor do conteúdo do rodapé*/
+            background-color: #6EAFB0; /*Define a cor de fundo do rodapé*/
+            color: #050007; /* Define a cor do texto no rodapé*/
+            bottom: 0; /* Coloca o rodapé na parte inferior da janela*/
+            width: 100%;/*Faz o rodapé ocupar toda a largura da tela*/
+        }
+        /* Estilos do carrossel */
+        .carousel {
+            width: 100%;  /*Faz o carrossel ocupar 100% da largura disponível*/
+            max-width: 600px; /* Define limita a largura máxima a 600px.*/
+            margin: 20px auto; /* Centraliza o carrossel com espaçamento de 20px no topo e embaixo.*/
+            overflow: hidden; /*Garante que apenas uma imagem seja exibida por vez.*/
+            position: relative; /*Necessário para posicionar os botões "Próximo" e "Anterior" dentro do carrossel.*/
+        }
+        .slides {
+            display: flex; /*Organiza as imagens em linha*/
+            transition: transform 0.5s ease-in-out; /*Adiciona uma animação suave ao mover os slides.*/
+        }
+        .slide {
+            min-width: 100%; /* Garante que cada slide ocupe 100% da largura do carrossel.*/
+            text-align: center; /*Centraliza o conteúdo de texto dentro de cada slide.*/
+        }
+        .slide img {
+            width: 100%;
+            height: auto;
+        }
+        /* Botões de navegação */
+        .prev, .next { 
+            position: absolute; /*Coloca os botões sobre o carrossel.*/
+            top: 50%; /*Centraliza os botões verticalmente.*/
+            background-color: rgba(0, 0, 0, 0.5); /*Define Cor de fundo*/
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer; /*Faz o cursor mudar para "mão" ao passar sobre os botões*/
+        }
+        .prev {
+            left: 10px; /*Posicionam os botões nas laterais.*/
+        }
+        .next {
+            right: 10px; /*Posicionam os botões nas laterais.*/
+        }
+        /* Indicadores */
+        .indicators {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .indicator {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .indicator.active {
+            background-color: #6EAFB0;
+        }
+        /* Estilo da seção "Itens mais comprados" */
+        .btn-success {
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        .btn-success:hover {
+            background-color: #218838;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .video-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 560px;  /* Largura do vídeo */
+            height: 315px; /* Altura do vídeo */
+        }
+    
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho com o nome da loja -->
+    <header>
+        <h1>Régis Store</h1>
+    </header>
+
+    <!-- Menu de navegação -->
+    <nav style="background-color: #f8f9fa">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html">Contato</a>
+        <a href="sobre.html">Sobre Nós</a>
+    </nav>
+
+    <!-- Conteúdo principal da página -->
+    <div class="container">
+        <h2 style="text-align: center">Bem-vindo à nossa loja!</h2>
+        
+
+        <!-- Carrossel interativo -->
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide">
+                    <img src="https://img.joomcdn.net/e57e66f81b6bb17e411efe3a65d7899dd2e1f79b_original.jpeg" alt="Moda Feminina">
+                    <h3>Moda Feminina</h3>
+                    <p>Roupas de qualidade com o melhor custo-benefício.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://grupokyly.vteximg.com.br/arquivos/ids/218240/6105-salopete.jpg?v=637964369678730000" alt="Moda Infantil">
+                    <h3>Moda Infantil</h3>
+                    <p>Roupinhas selecionadas com o melhor cuidado para o seu bebê.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://cdn.sistemawbuy.com.br/arquivos/972a5a69ad37bd1866955fafde431d5c/produtos/667eece616456/img_3899-66b825fd049a9.jpeg" alt="Acessórios">
+                    <h3>Acessórios</h3>
+                    <p>Acessórios de qualidade para o dia a dia com mais comodidade.</p>
+                </div>
+            </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+        <div class="indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </div>
+
+    <!-- Seção "Itens mais comprados" -->
+    <section style="padding: 60px 0" style="background-color: #595a5a">
+        <div style="text-align: center; margin-bottom: 60px">
+            <h2 style="text-align: center">Itens mais comprados</h2>
+            <p style="text-align: center">Os itens mais comprados no mês foram:</p>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 60px;"> 
+        
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="item.html"><img src="https://img.lojasrenner.com.br/item/886246121/original/3.jpg" alt="Imagem 1" style="width: 100%" ></a>  <!--border-radius: 50%-->
+                <h5 style="font-size: 18px; margin: 15px 0">Calça Wide Leg Cintura Alta, Cargo</h5>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div> 
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="produtos.html"><img src="https://img.lojasrenner.com.br/item/883876831/original/2.jpg" alt="Imagem 2" style="width: 100%"></a>
+                <h5 style="font-size: 18px; margin: 15px 0">Brinco Coração em Metal Dourado</h5>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div> 
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="produtos.html"><img src="https://img.lojasrenner.com.br/item/873048361/original/3.jpg" alt="Imagem 3" style="width: 100%"></a>
+                <h5 style="font-size: 18px; margin: 15px 0">Jaqueta Leve Infantil con Capuz de Dino</h5>
+                <p><a class="btn btn-success">Comprar</a></p>
+            </div> 
+        </div>
+    </section>
+
+ 
+    <section style="padding: 60px 0">
+        <div style="text-align: center; margin-bottom: 40px">
+            <h2>Produto em Destaque</h2>
+            <p>Renove o guarda-roupa com os produtos em destaque da nossa loja!</p>
+            <p></p>Explore nossa seleção de roupas femininas, nossa linha de moda infantil e não deixe de conferir nossos acessórios exclusivos, que dão aquele toque especial ao seu visual. </p>
+            <p></p>Aproveite agora e garanta suas peças favoritas!</p>
+        </div>
+            
+        <!-- Envolve os três produtos e utiliza o estilo display: flex para posicioná-los em linha (horizontalmente). -->
+        <div style="display: flex; justify-content: center; gap: 60px;"> 
+            <!-- Produto 1 -->
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="produtos.html"><img src="https://img.lojasrenner.com.br/item/927665227/original/3.jpg" alt="Blusa" style="width: 100%"></a>
+                <h2 style="font-size: 18px; margin: 15px 0;">Blusa sem Manga em Chiffon com Golinha e Forro Branco Neve</h2>
+                <p>R$80.00</p>
+                <p>Eleve seu estilo com essa blusa sofisticada e confortável.</p>
+            </div> 
+             <!-- Produto 2 -->
+             <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="produtos.html"><img src="https://img.lojasrenner.com.br/item/895849215/original/3.jpg" alt="Conjunto Prata" style="width: 100%"></a>
+                <h2 style="font-size: 18px; margin: 15px 0;">Conjunto Colar e Brinco Mexicano</h2> 
+                <p>R$90.00</p>
+                <p>Conjunto clássico de prata pura, ideal para qualquer ocasião.</p>
+            </div>
+            <!-- Produto 3 -->
+            <div style="border: 1px solid #6EAFB0; width: 300px; text-align: center; padding: 40px;">
+                <a href="produtos.html"><img src="https://img.lojasrenner.com.br/item/882203546/original/3.jpg" alt="Conjunto Infantil" style="width: 100%"></a>
+                <h2 style="font-size: 18px; margin: 15px 0;">Pijama Longo Infantil em Fleece com Estampa do Simba</h2>
+                <p>R$60.00</p>
+                <p>Conjunto confortável e macio para o dia a dia das crianças.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer>
+         <p> R. Zulmira Canavarros, 95 - Centro, Cuiabá - MT, 78005-390</p>
+         <p> (65) 3318-1526</p>
+         <p> regisstore@gmail.com</p>
+         <p>Copyright &copy; 2024 - Régis Store</p>
+    </footer>
+
+    <!-- JavaScript do carrossel -->
+    <script>
+        let currentSlide = 0; /*Controla qual slide está sendo exibido*/
+        const slides = document.querySelectorAll('.slide');
+        const indicators = document.querySelectorAll('.indicator');
+
+        function showSlide(index) /*Função que exibe o slide correto e atualiza os indicadores.*/{
+            const slidesContainer = document.querySelector('.slides');
+            slidesContainer.style.transform = `translateX(-${index * 100}%)`;
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+        }
+        /*Adiciona eventos de clique nos botões Próximo e Anterior para alternar entre os slides*/
+        document.querySelector('.next').addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        /*Permite que o usuário clique nos indicadores para ir diretamente para o slide correspondente*/
+        indicators.forEach((indicator, i) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = i;
+                showSlide(currentSlide);
+            });
+        });
+    </script>
+</body>
+</html>
