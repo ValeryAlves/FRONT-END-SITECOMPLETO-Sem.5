@@ -46,7 +46,7 @@ Projeto Final apresentado na disciplina de Front-End do 1º Semestre - 5ª semam
 
 1. **Clone o repositório**  
    ```bash
-     git clone https://github.com/seu-usuario/regis-store.git
+     git clone https://github.com/ValeryAlves/FRONT-END-SITECOMPLETO-Sem.5.git
      cd regis-store
 2. Abra o arquivo index.html no navegador para acessar a loja.
 3. Navegue pelas páginas usando o menu superior.
